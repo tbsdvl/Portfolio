@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap"
@@ -27,7 +28,11 @@
       <h1>Triston Burns</h1>
       <nav>
         <ul>
-          <li><a href="#github">Github</a></li>
+          <li>
+            <a href="https://github.com/tbsdvl/Portfolio" target="_blank"
+              >Github</a
+            >
+          </li>
 
           <li><a href="#portfolio">Portfolio</a></li>
 
@@ -37,6 +42,7 @@
     </header>
     <main>
       <section>
+        <!-- <p class="herotext">Simple, effective web design.</p> -->
         <img
           src="./assets/images/canyon.jpg"
           alt="hero image"
@@ -55,13 +61,13 @@
       </aside>
       <div>
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus,
-          odio sequi reiciendis enim a porro autem dolore quasi veritatis
-          repudiandae dignissimos fuga quaerat dicta officia exercitationem
-          doloribus pariatur. Omnis, accusamus!
+          Triston Burns is an aspiring web developer from Tucson, Arizona. After
+          studying data science at Arizona State University, Triston is
+          continuing his education in web development and seeks employment as a
+          full stack developer.
         </p>
       </div>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <h1>Portfolio</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quasi
@@ -71,15 +77,32 @@
         </p>
       </section>
 
-      <section class="contact">
+      <section class="contact" id="contact">
+        <form>
         <h1>Contact Me</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed vitae
-          alias, debitis fugiat quasi ipsa in assumenda praesentium sunt! Quasi
-          quae aliquid rem esse, facere ducimus accusantium quia! Blanditiis,
-          quibusdam?
-        </p>
+
+        <label for="firstname">First Name</label>
+        <input id="firstname" type="text" placeholder="First Name">
+
+        <br>
+
+        <label for="lastname">Last Name</label>
+        <input id="lastname" type="text" placeholder="Last Name">
+
+        <br>
+
+        <label for="email">Email</label>
+        <input id="email" type="text" placeholder="youremail@example.com">
+
+        <br>
+
+        <button>Submit</button>
+
+        <br>
       </section>
+      <footer>
+        <i>Triston Burns &copy; 2021</i>
+      </footer>
     </main>
   </body>
 </html>
