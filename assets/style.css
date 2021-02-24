@@ -1,4 +1,5 @@
 * {
+  /* box-sizing: border-box; */
   margin: 0px;
   font-family: "Open Sans", sans-serif;
 }
@@ -14,21 +15,20 @@ body {
 
 main {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  margin: 0;
 }
 
 .header {
+  display: flex;
   position: fixed;
-  top: 0;
   width: 100%;
   height: 60px;
-  margin: 0;
+  text-align: center;
   background-color: #fdfdfd;
   z-index: 1;
 }
 
-.header h1 {
+.name {
   font-family: "Shippori Mincho", serif;
   text-align: center;
   color: #000b0d;
@@ -47,17 +47,18 @@ header nav ul li {
   display: inline-block;
 }
 
+main {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 100%; */
+  background-color: #f5f5f5;
+}
+
 a {
   text-decoration: none;
   color: #000b0d;
   font-family: "Shippori Mincho", serif;
   font-size: 24px;
-}
-
-main {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #f5f5f5;
 }
 
 .hero {
@@ -76,10 +77,12 @@ main {
 }
 
 .about {
-  flex: 1;
-  padding: 35px;
+  flex: 3;
+  position: relative;
+  top: 0.5em;
+  left: 1em;
   color: #000b0d;
-  border-bottom: 15px solid #f5f5f5;
+  padding: 2em;
 }
 
 .about h1 {
@@ -91,30 +94,32 @@ main {
 
 .about hr {
   border: var(--border);
-  width: 80%;
+  width: 55%;
 }
 
 .about img {
-  background-color: #b7b9b4;
+  background-color: #727171;
   padding: 5px;
   border: 7px outset #727575;
-  flex-wrap: wrap;
+  border-radius: 5px;
+  height: 70%;
+  width: 60%;
 }
 
 .bio {
-  flex: 2;
-}
-
-.bio p {
   flex: 3;
   position: relative;
-  top: 4.75em;
-  right: 1em;
+  top: 5.5em;
+  right: 5em;
   font-family: "Open Sans", sans-serif;
   font-size: 36px;
 }
 
+
 .portfolio {
+  display: relative;
+  flex-direction: column;
+  justify-content: center;
   background-color: #cecfce;
 }
 
@@ -127,18 +132,36 @@ main {
 
 .portfolio hr {
   border: var(--border);
-  width: 23%;
   position: relative;
   left: 2.4em;
+  width: 23%;
 }
 
 .container {
+  display: flex;
+  flex: 50%;
   position: relative;
-  text-align: center;
+  left: 10em;
+  width: 100%;
   color: #000;
 }
 
+.bottom-left {
+  position: relative;
+  left: 2em;
+  bottom: 2em;
+}
+
+/* .container-small {
+  width: 33%;
+  position: relative;
+  text-align: left;
+  color: #000;
+} */
+
 .container img {
+  height: 75%; 
+  width: 75%;
   border: 4px solid #b7b9b4;
   border-radius: 2px;
 }
@@ -148,19 +171,9 @@ main {
   opacity: 0.5;
 }
 
-.bottom-left {
-  position: absolute;
-  left: 8em;
-  bottom: 1em;
-}
-
 .contact {
   background-color: #b7b9b4;
   width: 100%;
-}
-
-.contact form {
-  text-align: center;
 }
 
 .contact h1 {
@@ -172,9 +185,31 @@ main {
 
 .contact hr {
   border: var(--border);
-  width: 31%;
   position: relative;
   left: 0.5em;
+}
+
+.contact form {
+  text-align: center;
+}
+
+.contact input[type=text] {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.contact input[id="email"] {
+  position: relative;
+  left: 1.5em;
+}
+
+.contact button {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .contact button:hover {
@@ -187,8 +222,7 @@ footer {
   text-align: center;
 }
 
-@media screen (min-width 798px ) {
+@media only screen and (max-width: 798px ) {
   main {
-    width: 100%;
+    flex-direction: column;
   }
-}
