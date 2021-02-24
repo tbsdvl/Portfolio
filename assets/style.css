@@ -9,49 +9,48 @@
 }
 
 body {
-  background-color: #fdfdfd;
+  background-color: #f5f5f5;
   font-family: 'Open Sans', sans-serif;
-}
-
-main {
-  display: flex;
   margin: 0;
 }
 
 .header {
   display: flex;
+  justify-content: center;
   position: fixed;
   width: 100%;
-  height: 60px;
-  text-align: center;
+  height: 30px;
   background-color: #fdfdfd;
-  z-index: 1;
+  padding: 5px;
+  z-index: 2;
 }
 
-.name {
+.header h1 {
   font-family: "Shippori Mincho", serif;
-  text-align: center;
   color: #000b0d;
 }
 
-header nav ul {
+nav {
   position: fixed;
-  top: 9px;
-  left: 0;
-  margin: 0;
+  top: 1.5em;
+  background-color: #fdfdfd;
   width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  margin: 0;
   list-style-type: none;
 }
 
-header nav ul li {
+nav ul li {
   display: inline-block;
+  padding: 10px;
 }
 
 main {
   display: flex;
   flex-wrap: wrap;
-  /* width: 100%; */
-  background-color: #f5f5f5;
 }
 
 a {
@@ -62,6 +61,7 @@ a {
 }
 
 .hero {
+  display: flex;
   position: relative;
   text-align: center;
   color: #fdfdfd;
@@ -69,7 +69,8 @@ a {
 
 .herotext {
   position: absolute;
-  top: 0.8em;
+  flex-shrink: 1;
+  top: 0.4em;
   left: 0;
   font-size: 80px;
   font-family: 'Pattaya', sans-serif;
@@ -77,15 +78,14 @@ a {
 }
 
 .about {
-  flex: 3;
-  position: relative;
-  top: 0.5em;
-  left: 1em;
+  flex: 1;
+  background-color: #f5f5f5;
   color: #000b0d;
-  padding: 2em;
+  padding: 60px;
 }
 
 .about h1 {
+  flex-shrink: 2;
   font-family: "Philosopher", sans-serif;
   font-size: 84px;
   position: relative;
@@ -94,7 +94,7 @@ a {
 
 .about hr {
   border: var(--border);
-  width: 55%;
+  width: 95%;
 }
 
 .about img {
@@ -102,66 +102,103 @@ a {
   padding: 5px;
   border: 7px outset #727575;
   border-radius: 5px;
-  height: 70%;
-  width: 60%;
+  height: 75%;
+  width: 90%;
 }
 
 .bio {
-  flex: 3;
-  position: relative;
-  top: 5.5em;
-  right: 5em;
+  display: flex;
+  /* flex-wrap: wrap;
+  justify-content: space-between; */
+  flex: 2;
   font-family: "Open Sans", sans-serif;
   font-size: 36px;
+  background-color: #FDFDFD;
+  padding: 60px;
+  /* border-bottom: 10px solid #f5f5f5; */
 }
 
+.bio p {
+  flex-shrink: 2;
+  position: relative;
+  top: 3em;
+}
 
 .portfolio {
-  display: relative;
-  flex-direction: column;
-  justify-content: center;
   background-color: #cecfce;
+  width: 100%;
 }
 
 .portfolio h1 {
+  flex-shrink: 2;
   font-family: "Philosopher", sans-serif;
   font-size: 84px;
   position: relative;
-  left: 0.5em;
+  padding: 50px;
+  left: 0;
 }
 
 .portfolio hr {
   border: var(--border);
-  position: relative;
-  left: 2.4em;
-  width: 23%;
+  width: 25%;
 }
 
 .container {
   display: flex;
-  flex: 50%;
-  position: relative;
-  left: 10em;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
+  background-color: #cecfce;
   color: #000;
+}
+
+.smallcontainer {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  background-color: #cecfce;
+  padding: 5px;
+}
+
+.smallcontainer a {
+  position: relative;
+  left: 0;
+  width: 40%;
+}
+
+.container a {
+  width: 75%;
 }
 
 .bottom-left {
+  flex-shrink: 2;
   position: relative;
   left: 2em;
   bottom: 2em;
+  width: 50%;
 }
 
-/* .container-small {
-  width: 33%;
+.smallcontainer .bottom-left {
+  flex-shrink: 2;
   position: relative;
-  text-align: left;
-  color: #000;
-} */
+  left: 1em;
+  bottom: 4em;
+  width: 50%;
+  color: #fff;
+}
+
+.smallcontainer .bottom-center {
+    flex-shrink: 2;
+    position: relative;
+    left: 1em;
+    bottom: 2em;
+    width: 50%;
+    color: #fff;
+}
 
 .container img {
-  height: 75%; 
-  width: 75%;
+  height: 100%; 
+  width: 100%;
   border: 4px solid #b7b9b4;
   border-radius: 2px;
 }
@@ -179,14 +216,12 @@ a {
 .contact h1 {
   font-size: 84px;
   font-family: "Philosopher", sans-serif;
-  position: relative;
-  left: 0.05em;
+  padding: 50px;
 }
 
 .contact hr {
   border: var(--border);
-  position: relative;
-  left: 0.5em;
+  width: 33%;
 }
 
 .contact form {
@@ -217,12 +252,53 @@ a {
 }
 
 footer {
+  flex-shrink: 0;
   background-color: #989898;
   width: 100%;
   text-align: center;
 }
 
-@media only screen and (max-width: 798px ) {
-  main {
-    flex-direction: column;
-  }
+@media screen and (max-width: 1053px ) {
+
+main,
+nav {
+  flex-direction: column;
+}
+
+.bio{
+  position: relative;
+  top: 0;
+  bottom: 3em;
+  order: 2;
+}
+
+.portfolio {
+  position: relative;
+  top: 0;
+  order: 3;
+}
+
+.portfolio hr {
+  width: 90%;
+}
+
+.container {
+  position: relative;
+  top: 0;
+  order: 3;
+}
+
+.contact {
+  position: relative;
+  top: 0;
+  order: 4;
+}
+
+.contact hr {
+  width: 90%;
+}
+
+footer {
+  order: 5;
+}
+}
