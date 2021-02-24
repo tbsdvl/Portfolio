@@ -1,19 +1,23 @@
+/* Apply base text if no content loads */
 * {
-  /* box-sizing: border-box; */
   margin: 0px;
   font-family: "Open Sans", sans-serif;
 }
 
+/* Creates the --border variable used for hr tags */
 :root {
   --border: 1px solid #000;
 }
 
+/* Applies background-color, font, and removes the margin from the body */
 body {
   background-color: #f5f5f5;
   font-family: 'Open Sans', sans-serif;
   margin: 0;
 }
 
+/* Class for styling header's content including background, size, and location as user scrolls
+up and down the document */
 .header {
   display: flex;
   justify-content: center;
@@ -25,11 +29,14 @@ body {
   z-index: 2;
 }
 
+/* Class for styling header's h1 heading font and text color */
 .header h1 {
   font-family: "Shippori Mincho", serif;
   color: #000b0d;
 }
 
+/* Styles the nav's background and keeps it in place in the top left
+corner of the document */
 nav {
   position: fixed;
   top: 1.5em;
@@ -38,21 +45,25 @@ nav {
   z-index: 1;
 }
 
+/* Styles the nav's unordered list to have no list styling */
 nav ul {
   margin: 0;
   list-style-type: none;
 }
 
+/* Styles the nav's list content to display next to one another with space in between */
 nav ul li {
   display: inline-block;
   padding: 10px;
 }
 
+/* Styles content in the main section into a flexbox */
 main {
   display: flex;
   flex-wrap: wrap;
 }
 
+/* Styles the links to have no decoration, black text coloring, and font/font-size stylings */
 a {
   text-decoration: none;
   color: #000b0d;
@@ -60,6 +71,7 @@ a {
   font-size: 24px;
 }
 
+/* Class for styling the hero image displayed under the header and nav */
 .hero {
   display: flex;
   position: relative;
@@ -67,6 +79,7 @@ a {
   color: #fdfdfd;
 }
 
+/* Class for styling the text on top of the hero image */
 .herotext {
   position: absolute;
   flex-shrink: 1;
@@ -77,6 +90,7 @@ a {
   text-shadow: 2px 2px #989898;
 }
 
+/* Class for styling the portfolio "About Me" background on the left of the document */
 .about {
   flex: 1;
   background-color: #f5f5f5;
@@ -84,6 +98,7 @@ a {
   padding: 60px;
 }
 
+/* Class for styling the "About Me" h1 heading on the left of the document */
 .about h1 {
   flex-shrink: 2;
   font-family: "Philosopher", sans-serif;
@@ -92,11 +107,15 @@ a {
   left: 0.05em;
 }
 
+/* Class for styling the horizontal line under the h1 heading in the "About Me" section
+using the --border variable*/
 .about hr {
   border: var(--border);
   width: 95%;
 }
 
+/* Class for styling the "About Me" section image to have padding and a border outside
+used as an effect*/
 .about img {
   background-color: #727171;
   padding: 5px;
@@ -106,6 +125,7 @@ a {
   width: 90%;
 }
 
+/* Class for styling the "About Me" section biography paragraph's background and font on the right side of the document */
 .bio {
   display: flex;
   /* flex-wrap: wrap;
@@ -118,17 +138,20 @@ a {
   /* border-bottom: 10px solid #f5f5f5; */
 }
 
+/* Class for stylingthe "About Me" biography paragraph's position in container */
 .bio p {
   flex-shrink: 2;
   position: relative;
   top: 3em;
 }
 
+/* Class for styling the background of the "Portfolio" section*/
 .portfolio {
   background-color: #cecfce;
   width: 100%;
 }
 
+/* Class for styling the h1 heading's font, size, and padding in the "Portfolio" section */
 .portfolio h1 {
   flex-shrink: 2;
   font-family: "Philosopher", sans-serif;
@@ -138,11 +161,14 @@ a {
   left: 0;
 }
 
+/* Class for styling the horizontal line under the "Portfolio" section
+using the --border variable */
 .portfolio hr {
   border: var(--border);
   width: 25%;
 }
 
+/* Class for styling the div containing the Portfolio's deployed applications */
 .container {
   display: flex;
   flex-direction: column;
@@ -152,6 +178,7 @@ a {
   color: #000;
 }
 
+/* Class for styling the smaller containers under the largest, showcased application */
 .smallcontainer {
   display: flex;
   flex-direction: row;
@@ -160,16 +187,19 @@ a {
   padding: 5px;
 }
 
+/* Styles the smallcontainer class' hyperlinks to fit inside the container */
 .smallcontainer a {
   position: relative;
   left: 0;
   width: 40%;
 }
 
+/* Styles the container class' hyperlinks to fit inside the container */
 .container a {
   width: 75%;
 }
 
+/* Class for styling the text to the bottom-left of displayed application links */
 .bottom-left {
   flex-shrink: 2;
   position: relative;
@@ -178,6 +208,7 @@ a {
   width: 50%;
 }
 
+/* Styles the bottom-left class inside the smallcontainer classes */
 .smallcontainer .bottom-left {
   flex-shrink: 2;
   position: relative;
@@ -187,6 +218,7 @@ a {
   color: #fff;
 }
 
+/* Styles a smallcontainer's text to appear at the cetner (functionality is similar to bottom-left) */
 .smallcontainer .bottom-center {
     flex-shrink: 2;
     position: relative;
@@ -196,6 +228,7 @@ a {
     color: #fff;
 }
 
+/* Styles the images inside the "Portfolio" containers */
 .container img {
   height: 100%; 
   width: 100%;
@@ -203,31 +236,37 @@ a {
   border-radius: 2px;
 }
 
+/* Hovering over an application link will highlight the area and change the cursor to a pointer */
 .container a:hover {
   cursor: pointer;
   opacity: 0.5;
 }
 
+/* Class for styling the "Contact Me" section's background */
 .contact {
   background-color: #b7b9b4;
   width: 100%;
 }
 
+/* Styles the "Contact Me" section's font and padding for the h1 heading */
 .contact h1 {
   font-size: 84px;
   font-family: "Philosopher", sans-serif;
   padding: 50px;
 }
 
+/* Styles the horizontal line in the "Contact Me" section */
 .contact hr {
   border: var(--border);
   width: 33%;
 }
 
+/* Styles the form in the "Contact Me" section */
 .contact form {
   text-align: center;
 }
 
+/* Styles the input areas in the "Contact Me" form to have a box, padding, and margin */
 .contact input[type=text] {
   width: 50%;
   padding: 12px 20px;
@@ -235,11 +274,13 @@ a {
   box-sizing: border-box;
 }
 
+/* Adjusts the email input box to the right */
 .contact input[id="email"] {
   position: relative;
   left: 1.5em;
 }
 
+/* Styles the "submit" button to have a rounded border and a larger box */
 .contact button {
   padding: 12px 20px;
   margin: 8px 0;
@@ -247,10 +288,12 @@ a {
   border-radius: 10px;
 }
 
+/* Hovering over the "submit" button will change the cursor to a pointer */
 .contact button:hover {
   cursor: pointer;
 }
 
+/* Styles the footer section to display at the bottom of the document */
 footer {
   flex-shrink: 0;
   background-color: #989898;
@@ -258,6 +301,7 @@ footer {
   text-align: center;
 }
 
+/* Media queries for different screen sizes */
 @media screen and (max-width: 1053px ) {
 
 main,
@@ -302,3 +346,48 @@ footer {
   order: 5;
 }
 }
+
+@media screen and (max-width: 798px ) {
+
+  main,
+  nav {
+    flex-direction: column;
+  }
+  
+  .bio{
+    position: relative;
+    top: 0;
+    bottom: 3em;
+    order: 2;
+  }
+  
+  .portfolio {
+    position: relative;
+    top: 0;
+    order: 3;
+  }
+  
+  .portfolio hr {
+    width: 90%;
+  }
+  
+  .container {
+    position: relative;
+    top: 0;
+    order: 3;
+  }
+  
+  .contact {
+    position: relative;
+    top: 0;
+    order: 4;
+  }
+  
+  .contact hr {
+    width: 90%;
+  }
+  
+  footer {
+    order: 5;
+  }
+  }
